@@ -1,0 +1,134 @@
+#form {
+    width: 450px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    border: 30px solid #d5e5ff;
+    
+    font-size: 12px;
+}
+
+#form h1 {
+    color: #706fc2;
+    text-align:left;
+}
+
+#firstname {
+    width: 200px;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:#e7e9fe;
+    color: #706fc2;
+}
+
+#lastname {
+    width: 200px;
+    position: relative;
+    left: 230px;
+    border-radius: 10px;
+    margin-left: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:#e7e9fe;
+    color: #706fc2;
+}
+
+#email {
+     width: 200px;
+    
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:#e7e9fe;
+    color: #706fc2;
+}
+
+#phone {
+     width: 200px;
+    position: relative;
+    left: 230px;
+    bottom: 40px;
+    border-radius: 10px;
+    margin-left: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:#e7e9fe;
+    color: #706fc2;
+}
+
+#address {
+   position: relative;
+   bottom: 30px;
+   font-size: 1rem;
+    font-weight: bold;
+   width: 430px;
+   height: 60px;
+   border-radius: 8px;
+   background-color:#c8cfff;
+    color: #706fc2;
+}
+
+#tymh {
+     position: relative;
+   bottom: 30px;
+   font-size: 1rem;
+    font-weight: bold;
+   width: 430px;
+   height: 90px;
+   border-radius: 8px;
+   background-color:#a5b1fd;
+   color: #706fc2;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    left: 145px;
+    top: -20px;
+    width: 100px;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 18px;
+}
+ #form p {
+    color:#09c372;
+    font-weight: bold;
+ }
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+/* end of contact-form */

@@ -1,0 +1,112 @@
+ <html>
+    <head>
+        <link rel="stylesheet" href="style3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+        <title>
+         Registration
+        </title>
+    </head>
+ 
+<body> 
+ <!-- contact form -->
+ 
+ <div class="container">
+  <form id="form" action="/">
+      <h1>Get In Touch</h1>
+      <div class="input-control">
+        
+          <input id="firstname" name="firstname" placeholder="First Name" type="text">
+          <input id="lastname" name="lastname" placeholder="Last Name" type="text">
+          <div class="error"></div>
+      </div>
+      <div class="input-control">
+          
+          <input id="email" name="email" type="text" placeholder="Email">
+          <input id="phone" name="phone" placeholder="Phone" type="number">
+          <div class="error"></div>
+      </div>
+      <div class="input-control">
+          
+          <input id="address"name="address" placeholder="Adress" type="text">
+          <div class="error"></div>
+      </div>
+      <div class="input-control">
+          
+          <input id="tymh"name="msg " placeholder="Type your message here" type="text">
+          <div class="error"></div>
+         
+      </div>
+      <button onclick="fun()" type="submit">Submit</button>
+      <p>Thanks for submitting !</p>
+  </form>
+</div>
+
+<script type="text/javascript">
+
+const form = document.getElementById('form');
+const username = document.getElementById('firstname');
+const email = document.getElementById('email');
+const phone = document.getElementById('phone');
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const firstnameValue = firstname.value.trim();
+    const emailValue = email.value.trim();
+    
+    if(firstnameValue === '') {
+        setError(firstname, 'firstname is required');
+    } else {
+        setSuccess(firstname);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+    
+
+};
+
+function fun() {
+alert("Thanks for submitting");
+}
+    
+</script>
+</body>
+</html>
